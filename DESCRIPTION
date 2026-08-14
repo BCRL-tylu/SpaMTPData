@@ -36,6 +36,6 @@ biocViews: ExperimentData, ExperimentHub, Homo_sapiens_Data,
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Config/testthat/edition: 3
-URL: https://github.com/GenomicsMachineLearning/SpaMTPData
-BugReports: https://github.com/GenomicsMachineLearning/SpaMTPData/issues
+URL: https://github.com/BCRL-tylu/SpaMTPData
+BugReports: https://github.com/BCRL-tylu/SpaMTPData/issues
 Config/roxygen2/version: 8.1.0

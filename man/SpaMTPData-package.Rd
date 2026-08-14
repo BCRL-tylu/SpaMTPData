@@ -11,8 +11,8 @@ used in SpaMTP examples, tests and vignettes.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/GenomicsMachineLearning/SpaMTPData}
-  \item Report bugs at \url{https://github.com/GenomicsMachineLearning/SpaMTPData/issues}
+  \item \url{https://github.com/BCRL-tylu/SpaMTPData}
+  \item Report bugs at \url{https://github.com/BCRL-tylu/SpaMTPData/issues}
 }
 
 }
