@@ -187,9 +187,6 @@ SpaMTPDataResources <- function(version = NULL, category = NULL) {
 #'
 #' @examples
 #' SpaMTPData("mouse_brain_dhb_striatum", metadata = TRUE)
-#' \dontrun{
-#' striatum <- SpaMTPData("mouse_brain_dhb_striatum")
-#' }
 SpaMTPData <- function(resource, version = "latest", local_dir = NULL,
                        hub = NULL, metadata = FALSE, offline = FALSE,
                        fallback_url = TRUE, cache_dir = NULL, timeout = 1800,
@@ -261,6 +258,9 @@ SpaMTPData <- function(resource, version = "latest", local_dir = NULL,
 #' @inheritParams SpaMTPData
 #' @return The value returned by [SpaMTPData()].
 #' @export
+#'
+#' @examples
+#' SpaMTPDataResource("mouse_brain_dhb_striatum", metadata = TRUE)
 SpaMTPDataResource <- function(resource, version = "latest", local_dir = NULL,
                                hub = NULL, metadata = FALSE, offline = FALSE,
                                fallback_url = TRUE, cache_dir = NULL,

@@ -46,3 +46,6 @@ The value returned by \code{\link[=SpaMTPData]{SpaMTPData()}}.
 \description{
 Alias for explicit SpaMTPData resource retrieval
 }
+\examples{
+SpaMTPDataResource("mouse_brain_dhb_striatum", metadata = TRUE)
+}

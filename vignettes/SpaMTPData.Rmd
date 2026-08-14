@@ -17,7 +17,7 @@ vignette: >
 through ExperimentHub. The package itself remains small and users download only
 the resources required for a particular workflow.
 
-```{r}
+```{r setup}
 library(SpaMTPData)
 resources <- SpaMTPDataResources()
 resources[c("resource", "version", "category")]
@@ -25,22 +25,41 @@ resources[c("resource", "version", "category")]
 
 # Loading a dataset
 
-After ExperimentHub ingestion, the mouse brain/DHB object is retrieved and
-cached with:
+Inspect the mouse brain/DHB record without downloading the object:
 
-```{r eval=FALSE}
+```{r inspect-resource}
+striatum_metadata <- SpaMTPData(
+  "mouse_brain_dhb_striatum",
+  metadata = TRUE
+)
+striatum_metadata[c("resource", "version", "bytes")]
+```
+
+After ExperimentHub ingestion, omit `metadata = TRUE` to retrieve and cache the
+object:
+
+```r
 striatum <- SpaMTPData("mouse_brain_dhb_striatum")
 ```
 
 The same interface can use a previously downloaded local file:
 
-```{r eval=FALSE}
+```r
 options(SpaMTPData.resource_dir = "/path/to/SpaMTPData-files")
 striatum <- SpaMTPData("mouse_brain_dhb_striatum", offline = TRUE)
 ```
 
+The explicit resource accessor follows the same interface:
+
+```{r explicit-accessor}
+SpaMTPDataResource(
+  "mouse_brain_dhb_striatum",
+  metadata = TRUE
+)
+```
+
 # Session information
 
-```{r}
+```{r session-info}
 sessionInfo()
 ```

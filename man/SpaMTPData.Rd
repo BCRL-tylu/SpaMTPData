@@ -49,7 +49,4 @@ Retrieve a SpaMTP experiment resource
 }
 \examples{
 SpaMTPData("mouse_brain_dhb_striatum", metadata = TRUE)
-\dontrun{
-striatum <- SpaMTPData("mouse_brain_dhb_striatum")
-}
 }
