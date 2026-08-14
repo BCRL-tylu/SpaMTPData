@@ -1,0 +1,46 @@
+---
+title: "Accessing SpaMTP Experiment Data"
+author: "Tianyao Lu"
+date: "2026-08-14"
+output:
+  BiocStyle::html_document:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Accessing SpaMTP Experiment Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+`SpaMTPData` makes the experiment data used in SpaMTP workflows discoverable
+through ExperimentHub. The package itself remains small and users download only
+the resources required for a particular workflow.
+
+```{r}
+library(SpaMTPData)
+resources <- SpaMTPDataResources()
+resources[c("resource", "version", "category")]
+```
+
+# Loading a dataset
+
+After ExperimentHub ingestion, the mouse brain/DHB object is retrieved and
+cached with:
+
+```{r eval=FALSE}
+striatum <- SpaMTPData("mouse_brain_dhb_striatum")
+```
+
+The same interface can use a previously downloaded local file:
+
+```{r eval=FALSE}
+options(SpaMTPData.resource_dir = "/path/to/SpaMTPData-files")
+striatum <- SpaMTPData("mouse_brain_dhb_striatum", offline = TRUE)
+```
+
+# Session information
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,7 @@
+^SpaMTPData\.Rproj$
+^\.Rproj\.user$
+^\.git$
+^\.github$
+^data-raw$
+^README\.Rmd$
+^CONTRIBUTING\.md$

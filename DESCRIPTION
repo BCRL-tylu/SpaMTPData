@@ -1,0 +1,41 @@
+Package: SpaMTPData
+Type: Package
+Title: Experiment Data Resources for SpaMTP Workflows
+Version: 0.99.0
+Date: 2026-08-14
+Authors@R: c(
+    person("Tianyao", "Lu",
+           email = "lu.t@wehi.edu.au",
+           role = c("aut", "cre")),
+    person("Andrew", "Causer", role = "aut"),
+    person("Quan", "Nguyen", role = "aut")
+    )
+Description: Provides lightweight, version-aware access to spatial
+    metabolomics and multi-omics experiment data used in SpaMTP workflows.
+    Resources cover mouse brain, mouse urinary bladder, simulated single-cell
+    multi-omics, annotation-refinement, and human brain examples. Large files
+    are retrieved and cached through ExperimentHub rather than stored in the
+    package repository.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.6.0)
+Imports:
+    AnnotationHub,
+    ExperimentHub,
+    S4Vectors,
+    utils
+Suggests:
+    BiocStyle,
+    ExperimentHubData,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+biocViews: ExperimentData, ExperimentHub, Homo_sapiens_Data,
+    Mus_musculus_Data, ReproducibleResearch
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+Config/testthat/edition: 3
+URL: https://github.com/GenomicsMachineLearning/SpaMTPData
+BugReports: https://github.com/GenomicsMachineLearning/SpaMTPData/issues
+Config/roxygen2/version: 8.1.0
